@@ -1,0 +1,35 @@
+@use '@haven/ui/theme/styles' as haven;
+
+html {
+  @include haven.theme;
+
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font: var(--mat-sys-body-medium);
+  color: var(--mat-sys-on-surface);
+  background: var(--mat-sys-surface);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--mat-sys-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--mat-sys-primary);
+  outline-offset: 2px;
+}
+
+html[data-haven-preset='liquid-glass'] body {
+  background: var(--haven-glass-ambient), var(--haven-glass-canvas);
+  background-attachment: fixed;
+}
